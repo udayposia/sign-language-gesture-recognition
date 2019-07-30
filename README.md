@@ -10,7 +10,7 @@ Please do cite it if you find this project useful. :)
 - Cleaner and understandable code.
 - Replaced all manual editing with command line arguments.
 - Removed Bugs due to changes in names of the `operations` in the inception model.
-- Code Tested on a dummy dataset of three classes on google colab.
+- Code Tested on a **dummy dataset** of three classes on **google colab.**
 
 ## DataSet Used
 * [Argentinian Sign Language Gestures](http://facundoq.github.io/unlp/lsa64/). The dataset is made available strictly for academic purposes by the owners. Please read the license terms carefully and cite their paper if you plan to use the dataset.
@@ -87,7 +87,7 @@ train_videos
     -h, --help      show the help message and exit
     ```
 
-The code involves some hand segmentation (based on the data we used) for each frame. (You can remove that code if you are working on some other data set)
+The code involves some **hand segmentation** (based on the data we used) for each frame. (You can remove that code if you are working on some other data set)
 
 #### Extracting frames form training videos
 
@@ -157,7 +157,7 @@ For more information about the above command refer [here](https://codelabs.devel
 
 #### Approach 1
 
-- Each Video is represented by a sequence of `n` dimensional vectors (probability distribution or output of softmax) one for each frame. Here `n` is the number of classes.
+- Each Video is represented by a sequence of `n` dimensional vectors **(probability distribution or output of softmax)** one for each frame. Here `n` is the number of classes.
 
     **On Training Data**
 
@@ -177,7 +177,7 @@ For more information about the above command refer [here](https://codelabs.devel
 
 #### Approach 2
 
-- Each Video represented by a sequence of 2048 dimensional vectors (output of last Pool Layer) one for each frame
+- Each Video represented by a sequence of 2048 dimensional vectors **(output of last Pool Layer)** one for each frame
 
     **On Training Data**
 
@@ -198,7 +198,7 @@ For more information about the above command refer [here](https://codelabs.devel
             --test
     ```
 
-    This will create a file `predicted-frames-GlobalPool-test.pkl` that will be used by RNN.
+    This will create a file `predicted-frames-GlobalPool-test.pkl` that will be used by **RNN**.
 
 ### 5. Train the RNN.
 
@@ -235,7 +235,7 @@ For more information about the above command refer [here](https://codelabs.devel
 python3 rnn_train.py predicted-frames-final_result-train.pkl non_pool.model
 ```
 
-This will train the RNN model on the **softmax based representation** of gestures for 10 epochs and save the model with name `non_pool.model` in a folder named checkpoints.
+This will train the RNN model on the **softmax based representation** of gestures for **10 epochs** and save the model with name `non_pool.model` in a folder named checkpoints.
 
 #### Approach 2
 
@@ -243,7 +243,7 @@ This will train the RNN model on the **softmax based representation** of gesture
 python3 rnn_train.py predicted-frames-GlobalPool-train.pkl pool.model
 ```
 
-This will train the RNN model on the **pool layer based representation** of gestures for 10 epochs and save the model with name `pool.model` in a folder named checkpoints.
+This will train the RNN model on the **pool layer based representation** of gestures for **10 epochs** and save the model with name `pool.model` in a folder named checkpoints.
 
 
 ### 6. Test the RNN Model
@@ -293,4 +293,4 @@ This will use the `pool.model` to predict the labels of the **pool layer based r
 Predictions and corresponding gold labels for each test video will be dumped in to **results.txt**
 
 
-Happy Coding :)
+Happy Coding <3
